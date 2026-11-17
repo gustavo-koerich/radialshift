@@ -1,5 +1,7 @@
 # RadialShift
 
+[![testes](https://github.com/gustavo-koerich/radialshift/actions/workflows/testes.yml/badge.svg)](https://github.com/gustavo-koerich/radialshift/actions/workflows/testes.yml)
+
 Menu radial para o Explorer do Windows: selecione arquivos, dê um toque no **Shift** e um anel de ações abre em volta do cursor. Hoje funcionam **Juntar PDFs** e **Copiar caminho**; converter para PDF, proteger com senha e NF-e → Excel estão no roteiro. As ações rodam em segundo plano e o resultado é salvo na mesma pasta do arquivo original.
 
 ## Destaques técnicos
