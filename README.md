@@ -1,6 +1,6 @@
 # RadialShift
 
-Menu radial para o Explorer do Windows: selecione arquivos, dê um toque no **Shift** e um anel de ações abre em volta do cursor — juntar PDFs, converter para PDF, proteger com senha, copiar caminho. As ações rodam em segundo plano e o resultado é salvo na mesma pasta do arquivo original.
+Menu radial para o Explorer do Windows: selecione arquivos, dê um toque no **Shift** e um anel de ações abre em volta do cursor. Hoje funcionam **Juntar PDFs** e **Copiar caminho**; converter para PDF, proteger com senha e NF-e → Excel estão no roteiro. As ações rodam em segundo plano e o resultado é salvo na mesma pasta do arquivo original.
 
 ## Destaques técnicos
 
