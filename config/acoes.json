@@ -1,0 +1,71 @@
+{
+  "trigger": { "mode": "tap", "tap_max_ms": 300, "cooldown_ms": 500 },
+  "categorias": [
+    {
+      "id": "pdf",
+      "rotulo": "PDF",
+      "icone": "file-pdf",
+      "acoes": [
+        {
+          "id": "converter_pdf",
+          "rotulo": "Converter",
+          "extensoes": [".docx", ".doc", ".xlsx", ".xls", ".pptx", ".jpg", ".jpeg", ".png"],
+          "min_itens": 1,
+          "max_itens": 50,
+          "executor": "ferramentas",
+          "timeout_s": 120
+        },
+        {
+          "id": "juntar_pdf",
+          "rotulo": "Juntar",
+          "extensoes": [".pdf"],
+          "min_itens": 2,
+          "max_itens": 100,
+          "executor": "ferramentas",
+          "timeout_s": 120
+        },
+        {
+          "id": "proteger_pdf",
+          "rotulo": "Senha",
+          "extensoes": [".pdf"],
+          "min_itens": 1,
+          "max_itens": 50,
+          "executor": "ferramentas",
+          "pede_senha": true,
+          "timeout_s": 60
+        }
+      ]
+    },
+    {
+      "id": "fiscal",
+      "rotulo": "Fiscal",
+      "icone": "receipt",
+      "acoes": [
+        {
+          "id": "nfe_excel",
+          "rotulo": "NF-e → Excel",
+          "extensoes": [".xml"],
+          "min_itens": 1,
+          "max_itens": 5000,
+          "executor": "ferramentas",
+          "timeout_s": 300
+        }
+      ]
+    },
+    {
+      "id": "caminho",
+      "rotulo": "Caminho",
+      "icone": "copy",
+      "acoes": [
+        {
+          "id": "copiar_caminho",
+          "rotulo": "Copiar",
+          "extensoes": ["*"],
+          "min_itens": 1,
+          "max_itens": 1000,
+          "executor": "interno"
+        }
+      ]
+    }
+  ]
+}

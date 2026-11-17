@@ -1,0 +1,12 @@
+bin/
+obj/
+.vs/
+*.user
+TestResults/
+.venv/
+__pycache__/
+build/
+dist/
+.env
+hangar.yaml
+CLAUDE.md

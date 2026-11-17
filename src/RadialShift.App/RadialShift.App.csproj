@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <!-- WPF + WinForms juntos geram ambiguidades com usings implícitos. -->
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <!-- WinForms só é usado no ícone da bandeja; o app é WPF e o DPI (PerMonitorV2) vem do manifest, como pede a spec. -->
+    <NoWarn>$(NoWarn);WFAC010</NoWarn>
+    <AssemblyName>RadialShift</AssemblyName>
+    <RootNamespace>RadialShift.App</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Serilog" Version="4.0.2" />
+    <PackageReference Include="Serilog.Sinks.File" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="RadialShift.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Contrato JSON compartilhado; o exe das ferramentas é copiado para a mesma pasta do app. -->
+    <ProjectReference Include="..\RadialShift.Ferramentas\RadialShift.Ferramentas.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\config\acoes.json" Link="config\acoes.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>
